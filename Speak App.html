@@ -1,0 +1,14 @@
+<input type="text" id="text-input" placeholder="Enter text">
+<button onclick="speakText()">Speak</button>
+<script>
+  function speakText() {
+    const text = document.getElementById('text-input').value;
+
+    // Create a new SpeechSynthesisUtterance object
+    const utterance = new SpeechSynthesisUtterance();
+    utterance.text = text;
+
+    // Use the SpeechSynthesis API to speak the text
+    speechSynthesis.speak(utterance);
+  }
+</script>
