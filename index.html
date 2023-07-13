@@ -1,10 +1,66 @@
 <html>
   <head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speak App</title>
   </head>
+  <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
+
   <body>
+    <div class="container">
+    <h1>Text-to-Speech App</h1>
     <input type="text" id="text-input" placeholder="Enter text">
-<button onclick="speakText()">Speak</button>
+    <button onclick="speakText()">Speak</button>
+  </div>
+
 <script>
   function speakText() {
     const text = document.getElementById('text-input').value;
